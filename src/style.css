@@ -1,17 +1,30 @@
+:root{
+  background-color: papayawhip;
+  color:darkslategrey ;
+}
+
 .card{
   padding: 15px;
   border-radius: 10px;
-  background-color: grey;
-  width:20%;
-  height: auto;
-  margin: 2%;
-  float:left;
+  background-color: darkslategrey;
+  box-shadow: 2px 3px rgba(0,0,0,0.1);
+  height: 146px;
+  margin: 3%;
+  color: papayawhip;
+  display: flex;
+  flex-direction: column;
+}
+#con{
+  display:flex;
+  flex-direction: row;
+ overflow:scroll; 
 
 }
 
 ul{
   list-style-type: none;
   overflow: hidden;
+  margin: auto;
 }
 
 li{
@@ -21,6 +34,47 @@ li{
 
 li a{
   display: block;
-  gap: 10px;
-  color: black;
+  color: aqua;
+  
+}
+lo{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  
+}
+
+button {
+  background-color: darkslategrey;
+  padding:15px;
+  border-radius: 20px;
+  border:none;
+  width: 80px ;
+}
+input{
+  padding:20px ;
+  border-radius: 20px;
+  margin:2%;
+  justify-content: center;
+}
+.task{
+  padding:20px;
+  width:auto;
+  height: auto;
+  background-color: aliceblue;
+}
+p{
+  font-size: 30px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  button{
+    padding:15px;
+    border-radius:19px;
+
+  
+  }
 }
