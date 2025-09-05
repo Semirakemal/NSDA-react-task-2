@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client';
 
 function Home (){
   return (
-    <home>
+    <div>
       <h1>Welcome To My Islamic To Do App</h1>
-    </home>
+    </dib>
   )
 }
 export default Home 
