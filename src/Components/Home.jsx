@@ -5,7 +5,7 @@ function Home (){
   return (
     <div>
       <h1>Welcome To My Islamic To Do App</h1>
-    </dib>
+    </div>
   )
 }
 export default Home 
