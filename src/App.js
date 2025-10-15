@@ -1,20 +1,53 @@
 import React from "react";
-import "./style.css";
-import Card from './Components/Card.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "./Components/Nav";
+import Home from "./Components/Home";
+import Task from "./Components/Task";
+import Card from "./Components/Card";
+import Completed from "./Components/Completed";
 
 
-export default function App() {
+function App() {
   return (
-<div id="con">
-    <Card title="🕌 Salah
-    "  dueDate= "5 time a day " />
-    <Card title="📖 Qur’an " dueDate= "Every day"/>
-    <Card title="🤲 Dhikr
-    "  dueDate= " after salah"/>
-    <Card title="🌅 Adhkar" dueDate= "Morning & Evening "/>
-    <Card title="💝 Sadaqah" dueDate= "once a week " />
-    <Card title="🌙 Fasting" dueDate= "weekly(Mon & Thu)" />
+    <Router>
+      <Nav />
+      <div className="p-6">
+        <Routes>
+          
+          <Route path="/" element={<Home />} />
 
-       </div>   
+          
+          <Route path="/tasks" element={<Task />} />
+         <Route path="/completed" element={<Completed />} />
+
+
+          
+          <Route
+            path="/explore"
+            element={
+              <div className="min-h-screen bg-green-50 flex flex-col items-center p-10 space-y-6">
+                <Card
+                  title="Read Surah Al-Kahf"
+                  dueDate="Due: Friday"
+                  priority="High"
+                  completed={false}
+                />
+                <Card
+                  title="Morning Dhikr"
+                  dueDate="Due: Today"
+                  priority="Low"
+                  completed={true}
+                />
+              </div>
+            }
+          />
+
+          
+          <Route path="/about" element={<div>About This App</div>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
+export default App;

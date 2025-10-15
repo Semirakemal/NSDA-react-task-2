@@ -1,21 +1,13 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Nav from './Components/Nav.jsx';
-import Card from './Components/Card.jsx';
-import Home  from './Components/Home.jsx';
-import Task  from './Components/Task.jsx';
-
-
-import App from './App';
+import App from './App.js';
+import './index.css';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-<>
-    <Nav />
-    <Home />
+  <React.StrictMode>
     <App />
-    <Task />
-  </>
+  </React.StrictMode>
 );
